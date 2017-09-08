@@ -16,5 +16,22 @@ namespace SampleWindowsFormsApp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using(Form2 form2 = new Form2())
+            {
+                DialogResult result = form2.ShowDialog(this);
+                if (result == DialogResult.OK)
+                {
+                    Console.WriteLine("OKがクリックされました");
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    Console.WriteLine("Cancelがクリックされました");
+                }
+
+            }
+        }
     }
 }
